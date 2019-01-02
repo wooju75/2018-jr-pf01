@@ -1,6 +1,40 @@
 @import 'base.css';
 
-header{width: 100%; position: fixed; box-shadow: 0 3px 4px rgba(0,0,0,0.3); font-size: 1rem; background-color: white;}
- .logo{float: left; padding: 1em;}
- .navs{float: right;}
-  .nav{float: right; padding: 1em;}
+header {width:100%; position:fixed; box-shadow:0 3px 4px rgba(0,0,0,0.3); font-size:1rem; background-color: white; z-index:999;}
+.logo {float:left; padding:1em;}
+.nav {cursor:pointer;}
+
+/***** navigation PC *****/
+.navs {float:right;}
+.navs .nav {float:right; padding:1em;}
+
+/***** navigation Mobile *****/
+.navs_mo {float:right; padding:1em; display:none;}
+.navs_mo_sub {height:100%; background-color:rgba(0,0,0,.8); position:fixed; z-index:1000; color:#fff; font-size:1rem; display:none;}
+.navs_mo_sub > li {padding:0.75em; padding-right:5em;}
+.navs_mo_sub > .nav_close {padding:1.25em; padding-right:5em;}
+.navs_mo_sub > .nav:hover {background-color: beige; color:#121212;}
+
+/***** navigation Response *****/
+@media screen and (max-width:768px) {
+	.navs {display:none;}
+	.navs_mo {display:block;}
+	.navs_mo_sub {display:block;}
+}
+
+.banner {padding-top:3rem;}
+.banner > ul > li {position:relative;}
+.banner_slogan {position:absolute; width:90%; left:5%; top:50%; color:#fff; transform:translateY(-50%); font-size:1rem;}
+.banner_slogan > h1 {font-size:4em; margin-bottom:0.75em;}	
+.banner_slogan > h4 {font-size:1.5em; margin-bottom:1em;}	
+.banner_slogan > button {font-size:1em; padding:1em; 
+	background-color:rgba(248, 248, 219, .7); color:#121212; border:none;}	
+.banner_slogan > button:hover {background-color:rgba(248, 248, 219, 1);}
+
+@media screen and (max-width:768px) {
+	.banner_slogan {font-size:0.75rem;}
+}
+
+@media screen and (max-width:480px) {
+	.banner_slogan {font-size:0.5rem;}
+}
