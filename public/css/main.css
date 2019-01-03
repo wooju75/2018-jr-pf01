@@ -1,13 +1,25 @@
 @import 'base.css';
 
-header {width:100%; position:fixed; box-shadow:0 3px 4px rgba(0,0,0,0.3); font-size:1rem; background-color: white; z-index:999;}
+/***** 공통사항 *****/
+/***** Design Animation  *****/
+@keyframes SizeUp{
+	0%{transform: scale(1);}
+	100%{transform: scale(1.2);}
+}
+@keyframes SizeDn{
+	0%{transform: scale(1.2);}
+	100%{transform: scale(1);}
+}
+
+/***** Header *****/
+header {width:100%; position:fixed; box-shadow:0 3px 4px rgba(0,0,0,0.3); font-size:1rem; background-color: white; z-index:999; top: 0;}
 .logo {float:left; padding:1em;}
 .nav {cursor:pointer;}
+
 /***** navigation PC *****/
 .navs {float:right;}
 .navs .nav {float:right; padding:1em;}
 
-.wrap{}
 
 /***** navigation Mobile *****/
 .navs_mo {float:right; padding:1em; display:none;}
@@ -15,6 +27,7 @@ header {width:100%; position:fixed; box-shadow:0 3px 4px rgba(0,0,0,0.3); font-s
 .navs_mo_sub > li {padding:0.75em; padding-right:5em;}
 .navs_mo_sub > .nav_close {padding:1.25em; padding-right:5em;}
 .navs_mo_sub > .nav:hover {background-color: beige; color:#121212;}
+
 /***** navigation Response *****/
 @media screen and (max-width:768px) {
 	.navs {display:none;}
@@ -22,7 +35,8 @@ header {width:100%; position:fixed; box-shadow:0 3px 4px rgba(0,0,0,0.3); font-s
 	.navs_mo_sub {display:block;}
 }
 
-.banner {position:relative; top:3rem; }
+/***** banner PC *****/
+.banner {position:relative; margin-top:3rem;}
 .banner_wrap {position:relative; width:100%;} /*배너무빙의 기준*/
 .banner_wrap > li {position:absolute; width: 100%;}
 .banner_slogan {position:absolute; width:90%; left:5%; top:50%; color:#fff; transform:translateY(-50%); font-size:1rem;}
@@ -36,6 +50,7 @@ header {width:100%; position:fixed; box-shadow:0 3px 4px rgba(0,0,0,0.3); font-s
 .social_link > li {display:inline-block; color:#ccc; cursor:pointer;}
 .social_link > li:hover {color:#f1f1f1;}
 
+/***** banner Response  *****/
 @media screen and (max-width:768px) {
 	.banner_slogan {font-size:0.75rem;}
 }
@@ -43,3 +58,44 @@ header {width:100%; position:fixed; box-shadow:0 3px 4px rgba(0,0,0,0.3); font-s
 @media screen and (max-width:480px) {
 	.banner_slogan {font-size:0.5rem;}
 }
+
+/***** Company PC  *****/
+.company{padding: 5rem 0; text-align: center;}
+.company > h2{font-weight:300; letter-spacing: 3px; margin-bottom: 1rem;}
+.company > h4{font-weight:300;}
+.company_features{max-width: 1400px; margin: auto;}
+.company_features > li{width: 25%; float:left; padding: 1%; margin-top: 3rem;}
+.company_feature {font-size: 1rem;}
+.company_feature > li:nth-child(1) {font-size: 4rem;}
+.company_feature > li:nth-child(2) {font-size:1.25em; line-height: 4em;}/* font-size:1.25em;기준으로 line-height: 4em;가 먹는다*/
+.company_feature > li:nth-child(3) {line-height: 1.75em;}
+
+/***** company Response*****/
+@media screen and (max-width:768px) {
+   .company_features >li {width: 50%;}
+}
+
+@media screen and (max-width:480px) {
+   .company_features >li {width: 100%}
+}
+/***** Design PC *****/
+.design{padding: 5rem 0; font-size: 1rem; background-color: #eee;}
+.design > :first-child{float: left; width: 50%; padding:5%;}
+.design h2{ font-weight: 200; letter-spacing: 3px; margin-bottom:1.5em }
+.design h5{ margin-bottom: 2em; line-height: 1.5em }
+.design > :last-child{float: left; width: 40%; margin: 5%; overflow: hidden;border-radius: 0.5em;}
+.design img{ animation-name:SizeDn;  animation-duration: 1s; animation-fill-mode: forwards;}
+.design img:hover{ animation-name:SizeUp}
+
+/***** Design Response *****/
+@media screen and (max-width:480px) {
+   .design > :first-child {width: 100%}
+   .design > :last-child {width: 90%}
+}
+
+/***** Team PC *****/
+.team{padding: 5rem 0; text-align: center;}
+.team h2{font-weight: 200; letter-spacing: 3px; margin-bottom: 1.5em;}
+.team h5{line-height: 2em; margin-bottom: 1.5em;}
+.team > ul{ max-width: 1400px; margin: auto;}
+.member{width: 24%; margin: .5%; float: left; box-shadow: 0 0 5px rgba(0,0,0,0.3);}
