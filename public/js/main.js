@@ -1,8 +1,32 @@
+/***** 공통사항 변수 선언 ******/
 var bar = $(".navs_mo");
+var bar2 = $(".nav_close");
 var nav = $(".navs_mo_sub");
-var wid = nav.width();
-var navChk = false; //안보이는  상태
+var navWid = nav.width();
 
+/***** 반응형/높이를 위한 resize ******/
 $(window).resize(function(){
- wid = nav.width(); //네비게이션의 너비 가져온다
-}).tigger("resize")
+	navInit();	//모바일 네비게이션 가리기
+	banInit();	//배너 Auto height
+}).trigger("resize");
+
+/***** 메인 배너 ******/
+function banInit() {
+	$(".banner_wrap").height($(".banner_wrap > li").height());
+}
+
+/***** 모바일 네비게이션 ******/
+bar.click(navToggle);
+bar2.click(navToggle);
+function navInit() {
+	navWid = nav.width();
+	if($(window).width() > 768) navHide();
+	else navToggle();
+}
+function navHide() {
+	nav.css({"left":-navWid+"px"});
+}
+function navToggle() {
+	if(nav.position().left == 0) nav.stop().animate({"left": -navWid+"px"}, 500);
+	else nav.stop().animate({"left": 0}, 500);
+}
