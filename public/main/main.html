@@ -13,6 +13,7 @@
 	<link rel="stylesheet" href="../css/main.css">
 	<script src="../js/jquery-3.3.1.min.js"></script>
 	<script src="../js/imagesloaded.pkgd.min.js"></script>
+	<script src="../js/masonry.pkgd.min.js"></script> <!-- js는 제이쿼리가 제일 위에 있어야함 맨 밑에 있는게 제이쿼리랑 연동 되어야하기 때문에-->
 	<script src="../js/bootstrap.min.js"></script>
 </head>
 <body>
@@ -109,6 +110,8 @@
 			</div>
 		</section>
 		<section class="team page">
+			<h2>THE TEAM</h2>
+			<h5>The ones who runs this company</h5>
 			<ul class="clear"> <!-- li들을 띄울것이기 때문에 -->
 				<li class="member">
 					<ul>
@@ -160,7 +163,175 @@
 				</li>
 			</ul>
 		</section>
-	</div>
+		<section class="partner page">
+			<div class="partner_wrap clear">
+				<ul>
+					<li>14+ </li>
+					<li>Partners</li>
+				</ul>
+				<ul>
+					<li>55+</li>
+					<li>Projects Done</li>
+				</ul>
+				<ul>
+					<li>89+</li>
+					<li>Happy Clients</li>
+				</ul>
+				<ul>
+					<li>150+</li>
+					<li>Meetings</li>
+				</ul>
+			</div>
+		</section>
+		<section class="works page">
+			<h2>OUR WORK</h2>
+			<h5>What we've done for people</h5>
+			<!-- <div class="work_float">
+				<ul>
+					<li class="work"><img src="../img/tech_camera.jpg" class="img"></li>
+					<li class="work"><img src="../img/tech_drone.jpg" class="img"></li>
+					<li class="work"><img src="../img/tech_mic.jpg" class="img"></li>
+					<li class="work"><img src="../img/tech_phone.jpg" class="img"></li>
+				</ul>
+				<ul>
+					<li class="work"><img src="../img/tech_sound.jpg" class="img"></li>
+					<li class="work"><img src="../img/tech_tablet.jpg" class="img"></li>
+					<li class="work"><img src="../img/tech_tableturner.jpg" class="img"></li>
+					<li class="work"><img src="../img/tech_typewriter.jpg" class="img"></li>
+				</ul>
+			</div> -->
+		    <!-- <div class="work_grid">
+				<ul class="row">
+					<li class="work col-lg-3 col-md-4 col-sm-6 col-xs-12"><img src="../img/tech_camera.jpg" class="img"></li>
+					<li class="work col-lg-3 col-md-4 col-sm-6 col-xs-12"><img src="../img/tech_drone.jpg" class="img"></li>
+					<li class="work col-lg-3 col-md-4 col-sm-6 col-xs-12"><img src="../img/tech_mic.jpg" class="img"></li>
+					<li class="work col-lg-3 col-md-4 col-sm-6 col-xs-12"><img src="../img/tech_phone.jpg" class="img"></li>
+				</ul>
+				<ul>
+					<li class="work col-lg-3 col-md-4 col-sm-6 col-xs-12"><img src="../img/tech_sound.jpg" class="img"></li>
+					<li class="work col-lg-3 col-md-4 col-sm-6 col-xs-12"><img src="../img/tech_tablet.jpg" class="img"></li>
+					<li class="work col-lg-3 col-md-4 col-sm-6 col-xs-12"><img src="../img/tech_tableturner.jpg" class="img"></li>
+					<li class="work col-lg-3 col-md-4 col-sm-6 col-xs-12"><img src="../img/tech_typewriter.jpg" class="img"></li>
+				</ul>
+			</div> --> <!-- 1200(lg)/992(md)/768(sm)/768under(xs) -->
+			
+			<!-- <div class="work_flex">
+				<ul>
+					<li class="work"><img src="../img/tech_camera.jpg" class="img"></li>
+					<li class="work"><img src="../img/tech_drone.jpg" class="img"></li>
+					<li class="work"><img src="../img/tech_mic.jpg" class="img"></li>
+					<li class="work"><img src="../img/tech_phone.jpg" class="img"></li>
+				</ul>
+				<ul>
+					<li class="work"><img src="../img/tech_sound.jpg" class="img"></li>
+					<li class="work"><img src="../img/tech_tablet.jpg" class="img"></li>
+					<li class="work"><img src="../img/tech_tableturner.jpg" class="img"></li>
+					<li class="work"><img src="../img/tech_typewriter.jpg" class="img"></li>
+				</ul>
+			</div> -->
+			<div class="work_masorny">
+				<ul class="grid"> <!-- 껍데기가 될 애 -->
+					<li class="grid-sizer"></li>
+					<li class="work grid-item"><img src="../img/tech_camera.jpg" class="img"></li>
+					<li class="work grid-item"><img src="../img/tech_drone.jpg" class="img"></li>
+					<li class="work grid-item"><img src="../img/tech_mic.jpg" class="img"></li>
+					<li class="work grid-item"><img src="../img/tech_phone.jpg" class="img"></li>
+					<li class="work grid-item"><img src="../img/tech_sound.jpg" class="img"></li>
+					<li class="work grid-item grid-item--width2"><img src="../img/tech_tablet.jpg" class="img"></li>
+					<li class="work grid-item"><img src="../img/tech_tableturner.jpg" class="img"></li>
+					<li class="work grid-item"><img src="../img/tech_typewriter.jpg" class="img"></li>
+				</ul>
+			</div>
+		</section>
+		<section class="skills page">
+				<ul class="clear">
+					<li class="skill_lt">
+						<h2>Our Skills.</h2>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+						tempor incididunt ut labore et dolore.</p>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+						tempor incididunt ut labore et dolore.</p>
+					</li>
+					<li class="skill_rt">
+						<ul>
+							<li class="skill_tit">
+								<span class="fa fa-camera"></span> Photography
+							</li>
+							<li class="skill_bar">
+								<div style="width: 90%">90%</div>
+							</li>
+						</ul>
+						<ul>
+							<li class="skill_tit">
+									<span class="fa fa-desktop"></span> Web Design
+							</li>
+							<li class="skill_bar">
+								<div style="width: 85%">85%</div>
+							</li>
+						</ul>
+						<ul>
+							<li class="skill_tit">
+									<span class="fa fa-image"></span> Photoshop
+							</li>
+							<li class="skill_bar">
+								<div style="width: 80%">80%</div>
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</section>
+			<section class="prices page">
+					<h2>PRICING</h2>
+					<h5>Choose a pricing plan that fits your needs.</h5>
+					<ul class="clear">
+						<li class="price">
+							<ul>
+								<li class="price_tit">Basic</li>
+								<li><strong>10GB</strong> Storage</li>
+								<li><strong>10</strong> Emails</li>
+								<li><strong>10</strong> Domains</li>
+								<li>Endless Support</li>
+								<li class="price_price">
+									<h3><strong>$ 10</strong></h3>per month
+								</li>
+								<li class="price_bts">
+									<button class="w3-button w3-black">Sign Up</button>
+								</li>
+							</ul>
+						</li>
+						<li class="price">
+							<ul>
+								<li class="price_tit2">Pro</li>
+								<li><strong>25GB</strong> Storage</li>
+								<li><strong>25</strong> Emails</li>
+								<li><strong>25</strong> Domains</li>
+								<li>Endless Support</li>
+								<li class="price_price">
+									<h3><strong>$ 25</strong></h3>per month
+								</li>
+								<li class="price_bts">
+									<button class="w3-button w3-black">Sign Up</button>
+								</li>
+							</ul>
+						</li>
+						<li class="price">
+							<ul>
+								<li class="price_tit">Premium</li>
+								<li><strong>50GB</strong> Storage</li>
+								<li><strong>50</strong> Emails</li>
+								<li><strong>50</strong> Domains</li>
+								<li>Endless Support</li>
+								<li class="price_price">
+									<h3><strong>$ 50</strong></h3>per month
+								</li>
+								<li class="price_bts">
+									<button class="w3-button w3-black">Sign Up</button>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</section>
+		</div>
 	<footer>
 
 	</footer>

@@ -30,3 +30,12 @@ function navToggle() {
 	if(nav.position().left == 0) nav.stop().animate({"left": -navWid+"px"}, 500);
 	else nav.stop().animate({"left": 0}, 500);
 }
+
+/***** Masonry *****/
+$('.grid').imagesLoaded( function() {
+  $('.grid').masonry({
+		itemSelector: '.grid-item',
+		columnWidth: '.grid-sizer',
+		percentPosition: true
+	});
+});

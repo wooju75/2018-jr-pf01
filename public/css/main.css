@@ -1,25 +1,23 @@
 @import 'base.css';
 
 /***** 공통사항 *****/
-/***** Design Animation  *****/
-@keyframes SizeUp{
-	0%{transform: scale(1);}
-	100%{transform: scale(1.2);}
+@keyframes sizeUp {
+	0% {transform:scale(1);}
+	100% {transform:scale(1.2);}
 }
-@keyframes SizeDn{
-	0%{transform: scale(1.2);}
-	100%{transform: scale(1);}
+@keyframes sizeDn {
+	0% {transform:scale(1.2);}
+	100% {transform:scale(1);}
 }
 
 /***** Header *****/
-header {width:100%; position:fixed; box-shadow:0 3px 4px rgba(0,0,0,0.3); font-size:1rem; background-color: white; z-index:999; top: 0;}
+header {width:100%; position:fixed; box-shadow:0 3px 4px rgba(0,0,0,0.3); font-size:1rem; background-color: white; z-index:999; top:0;}
 .logo {float:left; padding:1em;}
 .nav {cursor:pointer;}
 
 /***** navigation PC *****/
 .navs {float:right;}
 .navs .nav {float:right; padding:1em;}
-
 
 /***** navigation Mobile *****/
 .navs_mo {float:right; padding:1em; display:none;}
@@ -38,7 +36,7 @@ header {width:100%; position:fixed; box-shadow:0 3px 4px rgba(0,0,0,0.3); font-s
 /***** banner PC *****/
 .banner {position:relative; margin-top:3rem;}
 .banner_wrap {position:relative; width:100%;} /*배너무빙의 기준*/
-.banner_wrap > li {position:absolute; width: 100%;}
+.banner_wrap > li {position:absolute; width:100%;}
 .banner_slogan {position:absolute; width:90%; left:5%; top:50%; color:#fff; transform:translateY(-50%); font-size:1rem;}
 .banner_slogan > h1 {font-size:4em; margin-bottom:0.75em;}	
 .banner_slogan > h4 {font-size:1.5em; margin-bottom:1em;}	
@@ -50,52 +48,149 @@ header {width:100%; position:fixed; box-shadow:0 3px 4px rgba(0,0,0,0.3); font-s
 .social_link > li {display:inline-block; color:#ccc; cursor:pointer;}
 .social_link > li:hover {color:#f1f1f1;}
 
-/***** banner Response  *****/
+/***** banner Response *****/
 @media screen and (max-width:768px) {
 	.banner_slogan {font-size:0.75rem;}
 }
-
 @media screen and (max-width:480px) {
 	.banner_slogan {font-size:0.5rem;}
 }
 
-/***** Company PC  *****/
-.company{padding: 5rem 0; text-align: center;}
-.company > h2{font-weight:300; letter-spacing: 3px; margin-bottom: 1rem;}
-.company > h4{font-weight:300;}
-.company_features{max-width: 1400px; margin: auto;}
-.company_features > li{width: 25%; float:left; padding: 1%; margin-top: 3rem;}
-.company_feature {font-size: 1rem;}
-.company_feature > li:nth-child(1) {font-size: 4rem;}
-.company_feature > li:nth-child(2) {font-size:1.25em; line-height: 4em;}/* font-size:1.25em;기준으로 line-height: 4em;가 먹는다*/
-.company_feature > li:nth-child(3) {line-height: 1.75em;}
-
-/***** company Response*****/
+/***** Company PC *****/
+.company {padding:5rem 0; text-align:center;}
+.company > h2 {font-weight:300; letter-spacing:3px; margin-bottom:1rem;}
+.company > h4 {font-weight:300;}
+.company_features {max-width:1400px; margin:auto;}
+.company_features > li {width:25%; float:left; padding:1%; margin-top:3rem;}
+.company_feature {font-size:1rem;}
+.company_feature > :nth-child(1) {font-size:4em;}
+.company_feature > :nth-child(2) {font-size:1.25em; line-height:4em;}
+.company_feature > :nth-child(3) {line-height:1.75em;}
+/***** company Response *****/
 @media screen and (max-width:768px) {
-   .company_features >li {width: 50%;}
+	.company_features > li {width:50%}
 }
-
 @media screen and (max-width:480px) {
-   .company_features >li {width: 100%}
+	.company_features > li {width:100%;}
 }
-/***** Design PC *****/
-.design{padding: 5rem 0; font-size: 1rem; background-color: #eee;}
-.design > :first-child{float: left; width: 50%; padding:5%;}
-.design h2{ font-weight: 200; letter-spacing: 3px; margin-bottom:1.5em }
-.design h5{ margin-bottom: 2em; line-height: 1.5em }
-.design > :last-child{float: left; width: 40%; margin: 5%; overflow: hidden;border-radius: 0.5em;}
-.design img{ animation-name:SizeDn;  animation-duration: 1s; animation-fill-mode: forwards;}
-.design img:hover{ animation-name:SizeUp}
 
+/***** Design PC *****/
+.design {padding:5rem 0; font-size:1rem; background-color:#eee;}
+.design > :first-child {float:left; width:50%; padding:5%;}
+.design h2 {font-weight:200; letter-spacing: 3px; margin-bottom:1.5em;}
+.design h5 {line-height:2em; margin-bottom:1.5em;}
+.design > :last-child {float:left; width:40%; margin:5%; overflow:hidden; border-radius:0.5em;}
+.design img {animation-name:sizeDn; animation-duration:1s; animation-fill-mode:forwards;}
+.design img:hover {animation-name:sizeUp;}
 /***** Design Response *****/
 @media screen and (max-width:480px) {
-   .design > :first-child {width: 100%}
-   .design > :last-child {width: 90%}
+	.design > :first-child {width:100%;}
+	.design > :last-child {width:90%;}
 }
 
 /***** Team PC *****/
-.team{padding: 5rem 0; text-align: center;}
-.team h2{font-weight: 200; letter-spacing: 3px; margin-bottom: 1.5em;}
-.team h5{line-height: 2em; margin-bottom: 1.5em;}
-.team > ul{ max-width: 1400px; margin: auto;}
-.member{width: 24%; margin: .5%; float: left; box-shadow: 0 0 5px rgba(0,0,0,0.3);}
+.team {padding:5rem 0; text-align:left;}
+.team h2 {font-weight:200; letter-spacing: 3px; margin-bottom:1.5em; text-align:center;}
+.team h5 {line-height:2em; margin-bottom:1.5em; text-align:center;}
+.team > ul {max-width:1200px; margin:auto;}
+.member {width:24%; margin:.5%; float:left; box-shadow:0 0 5px rgba(0,0,0,.3);}
+.member:hover { box-shadow:0 0 30px rgba(0,0,0,.5); transform:scale(1.01);}
+.member > ul > li:first-child {overflow: hidden;} 
+.member > ul > li:first-child > img {animation-name:sizeDn; animation-duration:1s; animation-fill-mode:forwards;}
+.member > ul > li:first-child > img:hover {animation-name:sizeUp;} 
+.member > ul > li:not(:first-child) {padding:1rem;}
+.member > ul > li:nth-child(2) {font-size:1.75em;}
+.member > ul > li:nth-child(3) {font-size:1.125em; color:#666;}
+.member > ul > li:nth-child(4) {line-height:2em;}
+.member > ul > li:nth-child(5) > button {width:100%;}
+/***** Team Response *****/
+@media screen and (max-width:768px) {
+	.member {width:48%; margin:1%;}
+}
+@media screen and (max-width:480px) {
+	.member {width:96%; margin:2%;}
+}
+
+/***** Partner PC *****/
+.partner {background-color:#555; text-align: center; color:#f8f8f8;}
+.partner_wrap > ul {width:25%; float:left; padding:3%; font-size:1rem;}
+.partner_wrap > ul > li:first-child {font-size:2em; line-height:1.5em;}
+.partner_wrap > ul > li:last-child {font-size:1em;}
+/***** Partner Response *****/
+@media screen and (max-width:768px) {
+	.partner_wrap > ul {width:50%;}
+}
+@media screen and (max-width:480px) {
+	.partner_wrap > ul {width:100%;}
+}
+
+/***** works PC *****/
+.works {padding:5rem 0;}
+.works h2 {font-weight:200; letter-spacing: 3px; margin-bottom:1.5em; text-align:center;}
+.works h5 {line-height:2em; margin-bottom:1.5em; text-align:center;}
+.work_float {max-width:1200px; margin:auto;}
+.work_float .work {float:left; width:24%; margin:.5%;}
+/* Flex 용 */
+.work_flex {max-width:1200px; margin:auto; width:100%;}
+.work_flex > ul {display:flex; -ms-display:flex; flex-direction:row; -ms-flex-direction:row; flex-wrap:wrap; -ms-flex-wrap:wrap; justify-content:space-between; -ms-justify-content:space-between;} 
+.work_flex > ul > li {width:23%; margin-bottom:1%;}
+
+/***** masonry *****/
+.work_masonry {max-width:1200px; margin:auto; width:100%;}
+.grid-sizer,
+.grid-item { width: 24%; margin: .5%; overflow: hidden;}
+.grid-item > img{ animation-duration: .5s; animation-fill-mode: forwards; animation-name: sizeDn}
+.grid-item > img:hover{ animation-name: sizeUp}
+/* 2 columns */
+/* .grid-item--width2 { width: 40%; } */
+/***** works Response *****/
+@media screen and (max-width:992px) {
+	.work_float .work {width:32%; margin:0.65%;}
+	.grid-sizer, .grid-item { width:32%; margin:0.65%;}
+}
+@media screen and (max-width:768px) {
+	.work_float .work {width:48%; margin:1%;}
+	.grid-sizer, .grid-item { width:48%; margin:1%;}
+}
+@media screen and (max-width:480px) {
+	.work_float .work {width:96%; margin:2%;}
+	.grid-sizer, .grid-item { width:96%; margin:2%;}
+}
+
+/***** Skills PC *****/
+.skills{background-color: #eee; padding: 5rem 0;}
+.skills > ul{width: 94%; margin: auto; max-width: 1200px;}
+.skills > ul > li{width: 50%; float: left;}
+
+.skill_lt{padding-right: 3%;}
+.skill_lt h2{font-weight: 200; letter-spacing: 3px; margin-bottom: 1.5em;}
+.skill_lt p{line-height: 2em; margin-top: 2em;}
+.skill_rt .skill_tit{padding: 2em 0 1em 0; letter-spacing: 0.25em;}
+.skill_rt .skill_bar{background-color: #aaa}
+.skill_rt .skill_bar > div{background-color: #555; color: #f1f1f1; text-align: center; padding: 0.5em;}
+
+/***** Skills Response *****/
+@media screen and (max-width:768px) {
+	.skills > ul > li{width: 50%; float: left;}
+}
+@media screen and (max-width:480px) {
+	.skills > ul > li{width: 100%; margin-bottom: 3%;}
+}
+
+/***** Price PC *****/
+.prices {padding:5rem 0; background-color:#666; text-align:center;}
+.prices h2 {font-weight:200; letter-spacing: 3px; margin-bottom:1.5em; color:#f1f1f1;}
+.prices h5 {line-height:2em; margin-bottom:4em; color:#f1f1f1;}
+.prices > ul {max-width:1200px; margin:auto;}
+.price {width:32%; float:left; box-shadow:0 0 0.5em rgba(0,0,0,0.3);}
+.price:hover {box-shadow:0 0 1em rgba(0,0,0,0.6);}
+.price:nth-child(2) {margin:0 2%; transform:translateY(-1.5rem);}
+.price > ul > li {padding:1.25em; border-bottom:1px solid #ccc; background-color:#f1f1f1;}
+.price_tit {font-size:1.25em; padding:2rem !important; border-bottom:none !important; background-color:#111 !important; color:#f1f1f1;}
+.price_tit2 {font-size:1.25em; padding:4rem !important; background-color:#f30 !important; border-bottom:none !important; color:#f1f1f1;}
+
+/***** Price Response *****/
+@media screen and (max-width:768px) {
+.price {width:96%; margin:2%;}
+.price:nth-child(2) {margin:2%; transform:translateY(0);}
+}
