@@ -72,8 +72,7 @@ $(window).resize(function(){
 		position: new daum.maps.LatLng(33.450701, 126.570667)
 	});
 	clusterer.addMarker(marker);
-  trigger.resize();
-});
+}).trigger("resize");
 
 /*****  bt_top *****/
 $("#bt_top").click(function(){
