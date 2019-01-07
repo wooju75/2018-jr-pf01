@@ -77,9 +77,9 @@ $(window).resize(function(){
 	clusterer.addMarker(marker);
 }).trigger("resize");
 
-/*****  bt_top *****/
+/***** bt_top *****/
 $("#bt_top").click(function(){
- $("html, body").stop().animate({"scrollTop":0},200)
+	$("html, body").stop().animate({"scrollTop":0}, 2000);
 });
 
 /*
@@ -108,4 +108,4 @@ $(".banner_wrap").eq(0).find(".slide")
 $(".slide", $(".banner_wrap").eq(0))
 */
 
-var mainBanner = new FadeSlide($(".slide"), {delay:3000, speed:1000});
+/* new FadeSlide($(".slide"), {delay:3000, speed:1000}); */

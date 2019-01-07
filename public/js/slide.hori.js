@@ -17,6 +17,8 @@ function ani(){
 } */
 
 var now = 0;
+var delay = 2000;
+var interval = setInterval(ani, delay);
 var end = $(".slide").length - 1;
 var dir = -1;
 function init() {
@@ -38,7 +40,7 @@ function init() {
 }
 function ani() {
 	init();
-	$(".banner_wrap").delay(2000).animate({"left":(100*dir)+"%"}, 1000, function(){
+	$(".banner_wrap").stop().animate({"left":(100*dir)+"%"}, 1000, function(){
 		if(dir == -1) {
 			if(now == end) now = 0;
 			else now++;
@@ -47,7 +49,12 @@ function ani() {
 			if(now == 0) now = end;
 			else now--;
 		}
-		ani();
 	});
 }
-ani();
+$(".banner_wrap").mouseenter(function(){
+	clearInterval(interval);
+});
+$(".banner_wrap").mouseleave(function(){
+	clearInterval(interval);
+	interval = setInterval(ani, delay);
+});

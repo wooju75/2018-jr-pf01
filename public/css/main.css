@@ -44,7 +44,7 @@ header {width:100%; position:fixed; box-shadow:0 3px 4px rgba(0,0,0,0.3); font-s
 }
 
 /***** banner PC *****/
-.banner {position:relative; margin:3rem auto 0 auto; max-width: 400px;}
+.banner {position:relative; margin:3rem auto 0 auto; max-width: 1200px;}
 .banner_wrap {position:relative; width:100%;} /*배너무빙의 기준*/
 .banner_wrap > li {position:absolute; width:100%;}
 .banner_slogan {position:absolute; width:90%; left:5%; top:50%; color:#fff; transform:translateY(-50%); font-size:1rem;}
@@ -53,6 +53,11 @@ header {width:100%; position:fixed; box-shadow:0 3px 4px rgba(0,0,0,0.3); font-s
 .banner_slogan > button {font-size:1em; padding:1em; 
 	background-color:rgba(248, 248, 219, .7); color:#121212; border:none;}	
 .banner_slogan > button:hover {background-color:rgba(248, 248, 219, 1);}
+.bt_banner {position: absolute; z-index: 11; top: 50%; transform: translateY(-50%); font-size: 3rem; opacity: 0.3
+;}
+.bt_banner:hover{opacity: 0.8;}
+#bt_prev{left: 5%;}
+#bt_next{right: 5%;}
 
 .social_link {position:absolute; width:100%; bottom:3%; left:5%; text-align:left; z-index:10;}
 .social_link > li {display:inline-block; color:#ccc; cursor:pointer;}
