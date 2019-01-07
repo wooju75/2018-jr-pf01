@@ -1,9 +1,11 @@
 /***** 공통사항 변수 선언 ******/
+const log = console.log;
+
 const mapKey = "543290867d5ebc18fb9238b9680b55c4" //한번 값을 주고나면 다른 값을 줄 수 없다(에러남)
-var bar = $(".navs_mo");
-var bar2 = $(".nav_close");
-var nav = $(".navs_mo_sub");
-var navWid = nav.width();
+var $bar = $(".navs_mo"); //제이쿼리를 품고 있는 변수라는 의미에서 앞에 $붙여서 직관적이게 쓴다
+var $bar2 = $(".nav_close");
+var $nav = $(".navs_mo_sub");
+var navWid = $nav.width();
 
 /***** 반응형/높이를 위한 resize ******/
 $(window).resize(function(){
@@ -17,28 +19,29 @@ function banInit() {
 }
 
 /***** 모바일 네비게이션 ******/
-bar.click(navToggle);
-bar2.click(navToggle);
+$bar.click(navToggle);
+$bar2.click(navToggle);
 function navInit() {
-	navWid = nav.width();
+	navWid = $nav.width();
 	if($(window).width() > 768) navHide();
 	else navToggle();
 }
 function navHide() {
-	nav.css({"left":-navWid+"px"});
+	$nav.css({"left":-navWid+"px"});
 }
 function navToggle() {
-	if(nav.position().left == 0) nav.stop().animate({"left": -navWid+"px"}, 500);
-	else nav.stop().animate({"left": 0}, 500);
+	if($nav.position().left == 0) $nav.stop().animate({"left": -navWid+"px"}, 500);
+	else $nav.stop().animate({"left": 0}, 500);
 }
 
 /***** Masonry *****/
+var masornyOption = {
+	itemSelector: '.grid-item',  //그리드 하나하나의 아이템으로 적용시킨다
+	columnWidth: '.grid-sizer',  //그리드 사이즈
+	percentPosition: true
+};
 $('.grid').imagesLoaded( function() {
-  $('.grid').masonry({
-		itemSelector: '.grid-item',
-		columnWidth: '.grid-sizer',
-		percentPosition: true
-	});
+  $('.grid').masonry(masornyOption);
 });
 
 /***** 다음 지도 *****/
@@ -78,3 +81,31 @@ $(window).resize(function(){
 $("#bt_top").click(function(){
  $("html, body").stop().animate({"scrollTop":0},200)
 });
+
+/*
+var options = {
+	speed: 3000,
+	gap: 3000,
+	type: "fade",
+	pager: true
+};
+var mainBanner = new Slide($(".banner"), $(".banner_wrap"), $(".slide"), options);
+var options = [{
+	delay: 3000,
+	speed: 1000
+},{
+	delay: 1000,
+	speed: 200
+},{
+	delay: 2000,
+	speed: 100
+}];
+var mainBanner = new FadeSlide($(".banner_wrap").eq(0).find(".slide"), options[0]);
+var mainBanner2 = new FadeSlide($(".banner_wrap").eq(1).find(".slide"), options[1]);
+var mainBanner3 = new FadeSlide($(".banner_wrap").eq(2).find(".slide"), options[2]);
+//접근법
+$(".banner_wrap").eq(0).find(".slide")
+$(".slide", $(".banner_wrap").eq(0))
+*/
+
+var mainBanner = new FadeSlide($(".slide"), {delay:3000, speed:1000});

@@ -2,7 +2,7 @@
 <html lang="ko">
 <head>
 	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1, maximum-scale=1">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
   <link rel="icon" href="../favicon.ico" type="image/x-icon">
@@ -41,12 +41,44 @@
 
 
   <div class="wrap">
-		<section class="banner page">
-			<ul class="banner_wrap">
-				<li>
+		<section class="banner page"> <!-- 움직여야할 애를 갖고있는 애 -->
+			<ul class="banner_wrap"> <!-- 전체 움직이는애 -->
+				<li class="slide">
 					<img src="../img/bg1.jpg" class="img">
 					<div class="banner_slogan">
 						<h1>Start something that matters</h1>
+						<h4>Stop wasting valuable time with projects that just isn't you.</h4>
+						<button>Learn more and start today</button>
+					</div>
+				</li>
+				<li class="slide">
+					<img src="../img/bg2.jpg" class="img">
+					<div class="banner_slogan">
+						<h1>Start something that matters</h1>
+						<h4>Stop wasting valuable time with projects that just isn't you.</h4>
+						<button>Learn more and start today</button>
+					</div>
+				</li>
+				<li class="slide">
+					<img src="../img/bg3.jpg" class="img">
+					<div class="banner_slogan">
+						<h1>Start something that matters</h1>
+						<h4>Stop wasting valuable time with projects that just isn't you.</h4>
+						<button>Learn more and start today</button>
+					</div>
+				</li>
+				<li class="slide">
+					<img src="../img/bg4.jpg" class="img">
+					<div class="banner_slogan">
+						<h1>Start something that matters</h1>
+						<h4>Stop wasting valuable time with projects that just isn't you.</h4>
+						<button>Learn more and start today</button>
+					</div>
+				</li>
+				<li class="slide">
+					<img src="../img/bg5.jpg" class="img">
+					<div class="banner_slogan">
+						<h1>Last Slide</h1>
 						<h4>Stop wasting valuable time with projects that just isn't you.</h4>
 						<button>Learn more and start today</button>
 					</div>
@@ -381,6 +413,8 @@
 				Copyright &copy;wooju.
 			</p>
 	</footer>
+	<script src="../js/slide.hori.js"></script>
+	<!--<script src="../js/slide.fade.js"></script> -->
 	<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=543290867d5ebc18fb9238b9680b55c4&libraries=clusterer"></script>
 	<script src="../js/main.js"></script>
 </body>
