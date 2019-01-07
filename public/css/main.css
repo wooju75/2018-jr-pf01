@@ -44,7 +44,7 @@ header {width:100%; position:fixed; box-shadow:0 3px 4px rgba(0,0,0,0.3); font-s
 }
 
 /***** banner PC *****/
-.banner {position:relative; margin:3rem auto 0 auto; max-width: 1200px;}
+.banner {position:relative; margin:3rem auto 0 auto; max-width: 1200px; overflow: hidden;}
 .banner_wrap {position:relative; width:100%;} /*배너무빙의 기준*/
 .banner_wrap > li {position:absolute; width:100%;}
 .banner_slogan {position:absolute; width:90%; left:5%; top:50%; color:#fff; transform:translateY(-50%); font-size:1rem;}

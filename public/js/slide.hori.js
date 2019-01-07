@@ -58,3 +58,15 @@ $(".banner_wrap").mouseleave(function(){
 	clearInterval(interval);
 	interval = setInterval(ani, delay);
 });
+$("#bt_prev").click(function(){
+	clearInterval(interval);
+	dir = 1;
+	ani();
+	interval = setInterval(ani, delay);
+});
+$("#bt_next").click(function(){
+	clearInterval(interval);
+	dir = -1;
+	ani();
+	interval = setInterval(ani, delay);
+});
