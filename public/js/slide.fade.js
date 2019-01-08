@@ -15,8 +15,8 @@ function ani() {
 	});
 } */
 
-var FadeSlide = (function(){
-	function FadeSlide(slides, options) {
+var SlideFade = (function(){
+	function SlideFade(slides, options) {
 		var obj = this;
 		this.slides = slides;
 		this.delay = options.delay;
@@ -27,14 +27,14 @@ var FadeSlide = (function(){
 		console.log(this.end);
 		this.init(obj);
 	}
-	FadeSlide.prototype.init = function(obj) {
+	SlideFade.prototype.init = function(obj) {
 		obj.slides.each(function(){
 			if(obj.depth < $(this).css("z-index")) obj.depth = $(this).css("z-index");
 		});
 		obj.depth++;
 		obj.ani(obj);
 	}
-	FadeSlide.prototype.ani = function(obj) {
+	SlideFade.prototype.ani = function(obj) {
 		var target = obj.slides.eq(obj.now);
 		target.css({"z-index":obj.depth++, "opacity":0});
 		target.delay(obj.delay).animate({"opacity":1}, obj.speed, function(){
@@ -43,5 +43,5 @@ var FadeSlide = (function(){
 			obj.ani(obj);
 		});
 	}
-	return FadeSlide;
+	return SlideFade;
 }());

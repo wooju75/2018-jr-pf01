@@ -42,7 +42,7 @@
 
   <div class="wrap">
 		<section class="banner page"> <!-- 움직여야할 애를 갖고있는 애 -->
-			<ul class="banner_wrap"> <!-- 전체 움직이는애 -->
+			<ul class="banner_wrap" id="banner1"> <!-- 전체 움직이는애 -->
 				<li class="slide">
 					<img src="../img/bg1.jpg" class="img">
 					<div class="banner_slogan">
@@ -84,11 +84,17 @@
 					</div>
 				</li>
 			</ul>
-			<button id="bt_prev" class="bt_banner w3-button">
+			<!-- <button id="bt_prev" class="bt_banner w3-button w3-white">
 				<span class="fa fa-arrow-left"></span>
 			</button>
-			<button id="bt_next" class="bt_banner w3-button">
+			<button id="bt_next" class="bt_banner w3-button w3-white">
 				<span class="fa fa-arrow-right"></span>
+			</button> -->
+			<button id="bt_prev" class="bt_banner w3-button w3-white">
+				<span class="fa fa-arrow-up"></span>
+			</button>
+			<button id="bt_next" class="bt_banner w3-button w3-white">
+				<span class="fa fa-arrow-down"></span>
 			</button>
 			<ul class="social_link">
 				<li><span class="fa fa-facebook-official"></span></li>
@@ -402,6 +408,40 @@
 						<!-- <span class="map_marker fa fa-map-marker"></span> -->	
 					</div>	
 				</section>
+				<section class="contacts">
+					<h2>CONTACT</h2>
+					<h5>Lets get in touch. Send us a message:</h5>
+					<ul class="clear">
+						<li class="contact_info">
+							<ul>
+								<li>
+									<span class="fa fa-map-marker"></span> Chicago, US
+								</li>
+								<li>
+									<span class="fa fa-phone"></span> Phone: +00 151515
+								</li>
+								<li>
+									<span class="fa fa-envelope"></span> Email: mail@mail.com
+								</li>
+							</ul>
+						</li>
+						<li class="contact_form">
+							<form>
+								<input type="text" name="uname" id="uname" placeholder="Name">
+								<input type="text" name="email" id="email" placeholder="Email">
+								<input type="text" name="subject" id="subject" placeholder="Subject">
+								<input type="text" name="message" id="message" placeholder="Message">
+								<button type="button" class="w3-button w3-black">
+									<span class="fa fa-paper-plane"></span> SEND MESSAGE
+								</button>
+							</form>
+						</li>
+					</ul>
+					<div id="map" class="map">
+						<!--span class="map_marker fa fa-map-marker"></span-->
+					</div>
+					
+				</section>
 		</div>
 	<footer>
     <button class="w3-button w3-light-grey">
@@ -419,8 +459,9 @@
 				Copyright &copy;wooju.
 			</p>
 	</footer>
-	<script src="../js/slide.hori.js"></script>
+	<!-- <script src="../js/slide.hori.js"></script> -->
 	<!--<script src="../js/slide.fade.js"></script> -->
+	 <script src="../js/slide.vert.js"></script>
 	<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=543290867d5ebc18fb9238b9680b55c4&libraries=clusterer"></script>
 	<script src="../js/main.js"></script>
 </body>
