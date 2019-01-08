@@ -104,7 +104,7 @@ var SlideHori = (function(){
 		this.now = 0;
 		this.end = this.slides.length - 1;
 		this.init(obj);
-		this.setInterval = setInterval(this.ani, this.options.delay, obj);
+		this.interval = setInterval(this.ani, this.options.delay, obj);
 		if(this.options.dirBtnUse === true) {
 			this.options.dirBtn[0].click(function(){
 				clearInterval(obj.interval);

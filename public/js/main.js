@@ -116,7 +116,7 @@ var options = {
 	dirBtnUse: true,
 	dirBtn:[$("#bt_prev"), $("#bt_next")]
 };
-//var horiBanner = new SlideHori($("#banner1"), $("#banner1").find(".slide"), options);
+var horiBanner = new SlideHori($("#banner1"), $("#banner1").find(".slide"), options);
 
 /*
 $(".banner_wrap").find(".slide")
