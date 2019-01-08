@@ -38,5 +38,12 @@ $(window).scroll(function(e){
 			"animation-duration": duration,
 			"animation-delay": delay
 		});
-	});
+	});//spa_ani를 갖고 있을때만 사용할 수 있음 
+
+	$(".page").eq(now).find(".fn_ani").each(function(){
+	 eval($(this).data("fn")+"($(this))");
+ });
 });
+function barMove(obj){
+ if(obj.width() == 0) obj.stop().animate({"width":obj.html()}, 2000);
+}

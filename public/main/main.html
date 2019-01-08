@@ -39,7 +39,6 @@
 		<li class="nav">CONTACT</li>
 	</ul>
 
-
 	<div class="wrap">
 		<section class="banner page">
 			<ul class="banner_wrap" id="banner1">
@@ -276,7 +275,7 @@
 					<li class="work"><img src="../img/tech_typewriter.jpg" class="img"></li>
 				</ul>
 			</div>
-			1200(lg)/992(md)/768(sm)/768under(xs)-->
+			<!--1200(lg)/992(md)/768(sm)/768under(xs)-->
 			<!--div class="work_grid">
 				<ul class="row">
 					<li class="work col-lg-3 col-md-4 col-sm-6 col-xs-12"><img src="../img/tech_camera.jpg" class="img"></li>
@@ -306,14 +305,14 @@
 			<div class="work_masonry">
 				<ul class="grid">
 					<li class="grid-sizer"></li>
-					<li class="work grid-item spa_ani" data-delay="0.5s"><img src="../img/tech_camera.jpg" class="img"></li>
-					<li class="work grid-item spa_ani" data-delay="0.2s"><img src="../img/tech_drone.jpg" class="img"></li>
-					<li class="work grid-item spa_ani" data-delay="0.4s"><img src="../img/tech_mic.jpg" class="img"></li>
-					<li class="work grid-item spa_ani" data-delay="0.9s"><img src="../img/tech_phone.jpg" class="img"></li>
-					<li class="work grid-item spa_ani" data-delay="0.1s"><img src="../img/tech_sound.jpg" class="img"></li>
-					<li class="work grid-item spa_ani grid-item--width2" data-delay="0.3s"><img src="../img/tech_tablet.jpg" class="img"></li>
-					<li class="work grid-item spa_ani" data-delay="0.7s"><img src="../img/tech_tableturner.jpg" class="img"></li>
-					<li class="work grid-item spa_ani" data-delay="0.8s"><img src="../img/tech_typewriter.jpg" class="img"></li>
+					<li class="work grid-item"><img src="../img/tech_camera.jpg" class="img"></li>
+					<li class="work grid-item"><img src="../img/tech_drone.jpg" class="img"></li>
+					<li class="work grid-item"><img src="../img/tech_mic.jpg" class="img"></li>
+					<li class="work grid-item"><img src="../img/tech_phone.jpg" class="img"></li>
+					<li class="work grid-item"><img src="../img/tech_sound.jpg" class="img"></li>
+					<li class="work grid-item grid-item--width2" data-delay="0.3s"><img src="../img/tech_tablet.jpg" class="img"></li>
+					<li class="work grid-item"><img src="../img/tech_tableturner.jpg" class="img"></li>
+					<li class="work grid-item"><img src="../img/tech_typewriter.jpg" class="img"></li>
 				</ul>
 			</div>
 		</section>
@@ -332,7 +331,7 @@
 							<span class="fa fa-camera"></span> Photography
 						</li>
 						<li class="skill_bar">
-							<div style="width:90%;">90%</div>
+							<div class="fn_ani" data-fn="barMove">90%</div>
 						</li>
 					</ul>
 					<ul>
@@ -340,7 +339,7 @@
 							<span class="fa fa-desktop"></span> Web Design
 						</li>
 						<li class="skill_bar">
-							<div style="width:85%;">85%</div>
+							<div class="fn_ani" data-fn="barMove">85%</div>
 						</li>
 					</ul>
 					<ul>
@@ -348,7 +347,7 @@
 							<span class="fa fa-image"></span> Photoshop
 						</li>
 						<li class="skill_bar">
-							<div style="width:80%;">80%</div>
+							<div class="fn_ani" data-fn="barMove">80%</div>
 						</li>
 					</ul>
 				</li>
@@ -405,57 +404,60 @@
 				</li>
 			</ul>
 		</section>
-				<section class="contacts page">
-					<h2>CONTACT</h2>
-					<h5>Lets get in touch. Send us a message:</h5>
-					<ul class="clear">
-						<li class="contact_info">
-              <ul>
-								<li>
-									<span class="fa fa-map-marker"></span> Chicago, US
-								</li>
-								<li>
-									<span class="fa fa-phone"></span> Phone: +00 151515
-								</li>
-								<li>
-									<span class="fa fa-envelope"></span> Email: mail@mail.com
-								</li>
-							</ul>
+		<section class="contacts page">
+			<h2>CONTACT</h2>
+			<h5>Lets get in touch. Send us a message:</h5>
+			<ul class="clear">
+				<li class="contact_info">
+					<ul>
+						<li>
+							<span class="fa fa-map-marker"></span> Chicago, US
 						</li>
-						<li class="contact_form">
-              <form>
-								<input type="text" name="uname" id="uname" placeholder="Name">
-								<input type="text" name="email" id="email" placeholder="Email">
-								<input type="text" name="subject" id="subject" placeholder="Subject">
-								<input type="text" name="message" id="message" placeholder="Message">
-								<button type="button" class="w3-button w3-black">
-									<span class="fa fa-paper-plane"></span> SEND MESSAGE
-								</button>
-							</form>
+						<li>
+							<span class="fa fa-phone"></span> Phone: +00 151515
+						</li>
+						<li>
+							<span class="fa fa-envelope"></span> Email: mail@mail.com
 						</li>
 					</ul>
-					<div id="map" class="map">
-						<!-- <span class="map_marker fa fa-map-marker"></span> -->	
-					</div>	
-				</section>
-		</div>
+				</li>
+				<li class="contact_form">
+					<form id="contact-form">
+						<input type="hidden" name="contact_number">
+						<input type="text" name="user_name" id="uname" placeholder="Name">
+						<input type="text" name="user_email" id="email" placeholder="Email">
+						<input type="text" name="user_subject" id="subject" placeholder="Subject">
+						<input type="text" name="user_message" id="message" placeholder="Message">
+						<button type="submit" class="w3-button w3-black">
+							<span class="fa fa-paper-plane"></span> SEND MESSAGE
+						</button>
+					</form>
+				</li>
+			</ul>
+			<div id="map" class="map">
+				<!--span class="map_marker fa fa-map-marker"></span-->
+			</div>
+			
+		</section>
+	</div>
 	<footer>
-    <button class="w3-button w3-light-grey">
-			<span class="fa fa-arrow-up"></span> To The Top
+		<button class="w3-button w3-light-grey" id="bt_top">
+			<span class="fa fa-arrow-up"></span> To the top
 		</button>
 		<ul class="footer_social_link">
-				<li><span class="fa fa-facebook-official"></span></li>
-				<li><span class="fa fa-instagram"></span></li>
-				<li><span class="fa fa-snapchat"></span></li>
-				<li><span class="fa fa-pinterest-p"></span></li>
-				<li><span class="fa fa-twitter"></span></li>
-				<li><span class="fa fa-linkedin"></span></li>
-			</ul>
+			<li><span class="fa fa-facebook-official"></span></li>
+			<li><span class="fa fa-instagram"></span></li>
+			<li><span class="fa fa-snapchat"></span></li>
+			<li><span class="fa fa-pinterest-p"></span></li>
+			<li><span class="fa fa-twitter"></span></li>
+			<li><span class="fa fa-linkedin"></span></li>
+		</ul>
 			<p>
 				Copyright &copy;wooju.
 			</p>
 	</footer>
 	<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=543290867d5ebc18fb9238b9680b55c4&libraries=clusterer"></script>
+	<script type="text/javascript" src="https://cdn.emailjs.com/sdk/2.3.2/email.min.js"></script>
 	<!--<script src="../js/slide.fade.js"></script> -->
 	<!-- <script src="../js/slide.vert.js"></script> -->
 	<script src="../js/page.spa.js"></script>

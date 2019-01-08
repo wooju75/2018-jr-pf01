@@ -123,3 +123,28 @@ $(".banner_wrap").find(".slide")
 $(".banner_wrap").children(".slide")
 $(".slide", $(".banner_wrap"))
 */
+
+
+/***** EmailJs *****/
+/*
+//선택자
+document.getElementById('contact-form') //ES5
+document.querySelector('#contact-form') //ES6
+$("#contact-form") //jquery
+document.getElementById('contact-form').addEventListener('submit', function(event) {
+		event.preventDefault();
+		this.contact_number.value = Math.random() * 100000 | 0;
+		emailjs.sendForm('contact_service', 'contact_template', this);
+});
+*/
+emailjs.init("user_O0nkvUFoqRLptUdUKEjX8"); //내걸로 쓰기!
+$('#contact-form').on('submit', function(e) {
+		e.preventDefault();
+		$("input[name ='contact_number']").val(Math.random() * 100000 | 0);
+		emailjs.sendForm('wooju', 'template_psNLlmiP', this).then(function(res){
+			alert("메세지전송에 성공했습니다. \n빠른시간안에 답변 드리겠습니다.");
+		}, function(err){
+	  	alert("메세지전송이 실패했습니다. \n다시 시도해 주세요.");
+		});
+		$(this)[0].reset(); //폼을 다시 리셋 (제이쿼리를 자바스크립트로 바꿔서 리셋)
+});
