@@ -148,3 +148,17 @@ $('#contact-form').on('submit', function(e) {
 		});
 		$(this)[0].reset(); //폼을 다시 리셋 (제이쿼리를 자바스크립트로 바꿔서 리셋)
 });
+
+/***** 네비게이션 구현 *****/
+$(".nav").click(goLoc);
+$(".logo").click(goLoc);
+function goLoc() {
+	var nav = $(this);
+	var i = $(this).data("page");
+	var pos = $(".page").eq(i).offset().top;
+	$("html, body").stop().animate({"scrollTop":pos}, 1000, function(){
+		$(".nav").css({"color":"#333"});
+		if(i > 0) nav.css({"color": "#b30"});
+	});
+}
+//$("html, body").stop().animate({"scrollTop":2000}, 1000);
