@@ -110,7 +110,7 @@ $(".slide", $(".banner_wrap").eq(0))
 
 //new SlideFade($(".slide"), {delay:3000, speed:1000});
 var options = {
-	delay: 3000,
+	delay: 2000,
 	speed: 300,
 	dir: -1,
 	dirBtnUse: true,
